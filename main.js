@@ -80,14 +80,14 @@ form.addEventListener("submit", (e) => {
 });
 
 let s = new Date().getDate();
-console.log(new Date().getDate());
 function calculateAge() {
   let Day = new Date().getDate() - day.value;
   let Month = new Date().getMonth() - month.value + 1;
   let Year = new Date().getFullYear() - year.value;
   let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
   if (new Date().getDate() < day.value) {
-    Day = Day + months[Month - 1];
+    Day = Day + months[month.value - 1];
   }
   if (new Date().getMonth() < month.value) {
     Month = Month + 12;
