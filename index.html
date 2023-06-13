@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <form action="#" class="form" id="form" >
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="table__labelWrapper">
+                <label for="day" class="dayl">Day</label>
+               
+              </th>
+              <th class="table__labelWrapper">
+                <label for="month">Month</label>
+              
+              </th>
+              <th class="table__labelWrapper">
+                <label for="year">Year</label>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input type="text" placeholder="DD" id="day"  />
+                
+              </td>
+              <td>
+                <input type="text" placeholder="MM" id="month" />
+               
+              </td>
+              <td>
+                <input type="text" placeholder="YYYY" id="year" />
+              
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="invalid">
+                <p>Must be a valid day</p>
+              </div>
+              <div class="isRequired invalid">
+                <p>This field is required</p>
+              </div>
+            </td>
+              <td>
+                <div class="invalid">
+                  <p>Must be a valid month</p>
+                </div>
+                <div class="isRequired invalid">
+                  <p>This field is required</p>
+                </div>
+              </td>
+              <td>
+                <div class="invalid">
+                  <p>Must be in the past</p>
+                </div>
+                <div class="isRequired invalid">
+                  <p>This field is required</p>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+      <div class="btnWrapper">
+        <hr>
+        <input type="submit" value="" id="submit" form="form" class="btnWrapper__btn" >
+      </div>
+<div class="output">
+  <p><strong class="output__numbers" >--</strong>years</p>
+  <p><strong class="output__numbers">--</strong> months</p>
+  <p><strong class="output__numbers">--</strong>days</p>
+</main>
+</div>
+  </body>
+</html>

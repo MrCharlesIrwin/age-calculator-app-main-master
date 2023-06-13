@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+body {
+  background-color: hsl(0, 0%, 94%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem 1rem 4.5rem 1rem;
+  width: 345px;
+  padding: 2rem 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0.7rem 0.3rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 8%);
+  width: 90%;
+}
+.table__labelWrapper {
+  color: hsl(0, 1%, 44%);
+  text-align: left;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+.table input {
+  box-sizing: border-box;
+  padding-left: 0.7rem;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 0.5rem;
+  height: 3rem;
+  width: 5.8rem;
+  opacity: 1;
+}
+.table input:hover {
+  cursor: pointer;
+}
+.table input::placeholder {
+  color: hsl(0, 1%, 44%);
+  opacity: 0.8;
+}
+
+.btnWrapper {
+  position: relative;
+  margin: 3.5rem auto 2rem;
+  display: flex;
+  align-items: center;
+  width: 96%;
+}
+.btnWrapper hr {
+  background-color: hsl(0, 0%, 86%);
+  border: none;
+  height: 1px;
+  width: inherit;
+}
+.btnWrapper__btn {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../assets/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2rem;
+  background-color: hsl(259, 100%, 65%);
+  margin: 1rem auto;
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  aspect-ratio: 1;
+}
+.btnWrapper__btn:hover {
+  outline: none;
+  background-color: hsl(0, 0%, 8%);
+}
+
+.output {
+  color: hsl(0, 0%, 8%);
+  font-family: "Poppins";
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 0.28;
+  text-transform: uppercase;
+  text-align: center;
+}
+.output__numbers {
+  color: hsl(259, 100%, 65%);
+  padding-right: 0.6rem;
+}
+
+@media (min-width: 35rem) {
+  main {
+    width: 35rem;
+    justify-content: start;
+    border-bottom-right-radius: 10rem;
+  }
+  .table {
+    border-spacing: 1.5rem 0.3rem;
+    padding-left: 2rem;
+  }
+  .table input {
+    font-size: 1.3rem;
+    font-weight: 800;
+    height: 3.1rem;
+    width: 8rem;
+  }
+  .btnWrapper {
+    margin-left: 3rem;
+    width: 95%;
+  }
+  .btnWrapper__btn {
+    right: -82%;
+  }
+  .output {
+    text-align: left;
+    font-size: 3.7rem;
+  }
+  .output strong {
+    font-size: 1.2em;
+    letter-spacing: 0.3rem;
+  }
+  .output__numbers {
+    padding-left: 3.4rem;
+  }
+}
+.invalid {
+  display: none;
+  text-transform: none;
+  text-align: start;
+  font-size: 0.7rem;
+  color: hsl(0, 82%, 59%);
+}
+
+.error {
+  outline: 1px solid red;
+}
+
+.errorColor {
+  color: red;
+}
+
+.display {
+  display: block;
+}/*# sourceMappingURL=main.css.map */

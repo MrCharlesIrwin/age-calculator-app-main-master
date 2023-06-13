@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap");
+$Primary-100: hsl(259, 100%, 65%);
+$Primary-200: hsl(0, 100%, 67%);
+
+$Neutral-100: hsl(0, 0%, 100%);
+$Neutral-200: hsl(0, 0%, 94%);
+$Neutral-300: hsl(0, 0%, 86%);
+$Neutral-400: hsl(0, 1%, 44%);
+$Neutral-500: hsl(0, 0%, 8%);
+
+body {
+  background-color: $Neutral-200;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  background-color: $Neutral-100;
+  border-radius: 1rem 1rem 4.5rem 1rem;
+  width: 345px;
+  padding: 2rem 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  border-collapse: separate;
+  border-spacing: 0.7rem 0.3rem;
+  text-transform: uppercase;
+  color: $Neutral-500;
+  width: 90%;
+  &__labelWrapper {
+    color: $Neutral-400;
+    text-align: left;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  input {
+    box-sizing: border-box;
+    padding-left: 0.7rem;
+    border: 1px solid $Neutral-300;
+    border-radius: 0.5rem;
+    height: 3rem;
+    width: 5.8rem;
+    opacity: 1;
+    &:hover {
+      cursor: pointer;
+    }
+    &::placeholder {
+      color: $Neutral-400;
+      opacity: 0.8;
+    }
+  }
+}
+
+.btnWrapper {
+  position: relative;
+  margin: 3.5rem auto 2rem;
+  display: flex;
+  align-items: center;
+  width: 96%;
+  hr {
+    background-color: $Neutral-300;
+    border: none;
+    height: 1px;
+    width: inherit;
+  }
+  &__btn {
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(../assets/images/icon-arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 2rem;
+    background-color: $Primary-100;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 50%;
+    width: 4rem;
+    aspect-ratio: 1;
+    &:hover {
+      outline: none;
+      background-color: $Neutral-500;
+    }
+  }
+}
+
+.output {
+  color: $Neutral-500;
+  font-family: "Poppins";
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 0.28;
+  text-transform: uppercase;
+  text-align: center;
+  &__numbers {
+    color: $Primary-100;
+    padding-right: 0.6rem;
+  }
+}
+
+@media (min-width: 35rem) {
+  main {
+    width: 35rem;
+    justify-content: start;
+    border-bottom-right-radius: 10rem;
+  }
+  .table {
+    border-spacing: 1.5rem 0.3rem;
+    padding-left: 2rem;
+
+    input {
+      font-size: 1.3rem;
+      font-weight: 800;
+      height: 3.1rem;
+      width: 8rem;
+    }
+  }
+  .btnWrapper {
+    margin-left: 3rem;
+    width: 95%;
+    &__btn {
+      right: -82%;
+    }
+  }
+  .output {
+    text-align: left;
+    font-size: 3.7rem;
+
+    strong {
+      font-size: 1.2em;
+      letter-spacing: 0.3rem;
+    }
+    &__numbers {
+      padding-left: 3.4rem;
+    }
+  }
+}
+
+.invalid {
+  display: none;
+  text-transform: none;
+  text-align: start;
+  font-size: 0.7rem;
+  color: hsl(0, 82%, 59%);
+}
+
+.error {
+  outline: 1px solid red;
+}
+.errorColor {
+  color: red;
+}
+.display {
+  display: block;
+}
